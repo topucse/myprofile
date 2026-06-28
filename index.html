@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Taijul Islam Topu | Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Segoe UI,Tahoma,sans-serif;
+}
+
+:root{
+
+--bg:#f6f8fc;
+--card:#ffffff;
+--text:#1b2430;
+--primary:#2563eb;
+--secondary:#64748b;
+--shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+body.dark{
+
+--bg:#0f172a;
+--card:#16213e;
+--text:#ffffff;
+--secondary:#cbd5e1;
+--shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+body{
+
+background:var(--bg);
+color:var(--text);
+transition:.4s;
+overflow-x:hidden;
+
+}
+
+body::before{
+
+content:"";
+position:fixed;
+width:650px;
+height:650px;
+background:linear-gradient(45deg,#2563eb55,#9333ea55);
+border-radius:50%;
+filter:blur(140px);
+left:-250px;
+top:-250px;
+animation:bgmove 16s infinite alternate;
+z-index:-2;
+
+}
+
+@keyframes bgmove{
+
+100%{
+
+transform:translate(900px,550px);
+
+}
+
+}
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,.08);
+z-index:999;
+
+}
+
+body.dark nav{
+
+background:rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+color:var(--primary);
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+nav ul a{
+
+text-decoration:none;
+color:var(--text);
+font-weight:600;
+
+}
+
+.toggle{
+
+font-size:22px;
+cursor:pointer;
+
+}
+
+section{
+
+padding:110px 10%;
+
+}
+
+.hero{
+
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:70px;
+
+}
+
+.hero h1{
+
+font-size:65px;
+line-height:1.1;
+
+}
+
+.hero h2{
+
+margin-top:10px;
+color:var(--primary);
+height:40px;
+
+}
+
+.hero p{
+
+margin:25px 0;
+line-height:1.8;
+color:var(--secondary);
+
+}
+
+.btn{
+
+display:inline-block;
+padding:15px 30px;
+background:var(--primary);
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.photo{
+
+width:360px;
+height:360px;
+margin:auto;
+border-radius:50%;
+background:linear-gradient(45deg,#2563eb,#9333ea);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:150px;
+color:#fff;
+animation:float 4s ease-in-out infinite;
+box-shadow:var(--shadow);
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+h3{
+
+font-size:36px;
+margin-bottom:30px;
+
+}
+
+.card{
+
+background:var(--card);
+padding:30px;
+border-radius:20px;
+box-shadow:var(--shadow);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+
+}
+
+.skill{
+
+margin:22px 0;
+
+}
+
+.bar{
+
+height:10px;
+background:#d9d9d9;
+border-radius:20px;
+overflow:hidden;
+
+}
+
+.fill{
+
+height:100%;
+width:0;
+background:linear-gradient(90deg,#2563eb,#9333ea);
+transition:2s;
+
+}
+
+.timeline{
+
+border-left:4px solid var(--primary);
+padding-left:25px;
+
+}
+
+.timeline .item{
+
+position:relative;
+margin-bottom:40px;
+
+}
+
+.timeline .item::before{
+
+content:"";
+position:absolute;
+width:16px;
+height:16px;
+background:var(--primary);
+border-radius:50%;
+left:-35px;
+top:5px;
+
+}
+
+.fade{
+
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+transform:none;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.photo{
+
+width:250px;
+height:250px;
+font-size:100px;
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Portfolio</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#achievements">Achievements</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="toggle">🌙</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Taijul Islam Topu</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+
+I am a passionate software developer who enjoys creating modern web
+applications, solving challenging problems, and building intuitive user
+experiences.
+
+</p>
+
+<a href="#" class="btn">Download Resume</a>
+
+</div>
+
+<div class="photo">
+
+<img src="Untitled design.png" alt="profile"
+     style="width:500px; height:500px; border-radius:50%; object-fit:cover;">
+</div>
+
+</section>
+
+<section id="about" class="fade">
+
+<h3>About Me</h3>
+
+<div class="card">
+
+<p>
+
+I am currently pursuing my Bachelor's degree in Computer Science.
+I enjoy web development, competitive programming, and learning modern
+technologies. I love building clean, responsive, and user-friendly websites.
+
+
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills" class="fade">
+
+<h3>Skills</h3>
+
+<div class="card">
+
+<div class="skill">
+
+HTML & CSS
+
+<div class="bar">
+<div class="fill" data-width="95%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+JavaScript
+
+<div class="bar">
+<div class="fill" data-width="90%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+React
+
+<div class="bar">
+<div class="fill" data-width="85%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+Node.js
+
+<div class="bar">
+<div class="fill" data-width="82%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+Python
+
+<div class="bar">
+<div class="fill" data-width="88%"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education" class="fade">
+
+<h3>Education & Competitions</h3>
+
+<div class="timeline">
+
+<div class="item">
+
+<h4>Bachelor of Science in Computer Science</h4>
+
+<p><b>Green University of Bangladesh</b></p>
+
+<p>2026 - Present</p>
+
+<p>
+
+Studying Software Engineering, Data Structures, Algorithms,
+Artificial Intelligence, Database Systems, and Cloud Computing.
+
+</p>
+
+</div>
+
+<div class="item">
+
+<h4>Narshngdi Model College</h4>
+
+<p>2019 - 2021</p>
+
+<p>
+
+higher secondary education in science
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="fade">
+
+<h3>Projects</h3>
+
+<div class="grid">
+
+<div class="card">
+
+<h4>URL Shorter</h4>
+
+<p>
+
+A web site that help to make long url in short.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h4>Task Management App</h4>
+
+<p>
+
+A productivity application featuring authentication,
+real-time updates, and cloud storage.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h4>AI Chat Application</h4>
+
+<p>
+
+An AI-powered chatbot built with modern web technologies. To find information from pdfs.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements" class="fade">
+
+<h3>Achievements</h3>
+
+<div class="grid">
+
+<div class="card">
+
+<h4>🏆 Programming Contest</h4>
+
+<p>
+Participated in multiple university programming contests and solved
+algorithmic problems under time constraints.
+</p>
+
+</div>
+
+<div class="card">
+
+<h4>🚀 Hackathon</h4>
+
+<p>
+Built innovative web applications during hackathons using modern
+technologies and teamwork.
+</p>
+
+</div>
+
+<div class="card">
+
+<h4>⭐ Open Source</h4>
+
+<p>
+Contributed to personal and community projects while continuously
+improving coding skills.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section id="certificates" class="fade">
+
+<h3>Certificates</h3>
+
+<div class="grid">
+
+<div class="card">
+
+<h4>Google Education</h4>
+
+<p>Certification Platform</p>
+
+</div>
+
+<div class="card">
+
+<h4>JavaScript Development</h4>
+
+<p>Demo Certification Platform</p>
+
+</div>
+
+<div class="card">
+
+<h4>Python Programming</h4>
+
+<p>Demo Certification Platform</p>
+
+</div>
+
+<div class="card">
+
+<h4>Cloud Fundamentals</h4>
+
+<p>Demo Certification Platform</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="fade">
+
+<h3>Contact Me</h3>
+
+<div class="card">
+
+<div class="grid">
+
+<div>
+
+<h4>Email</h4>
+
+<p>taijulislamtopu@example.com</p>
+
+</div>
+
+<div>
+
+<h4>Phone</h4>
+
+<p>01969880005</p>
+
+</div>
+
+<div>
+
+<h4>Location</h4>
+
+<p>Narshingdi, Dhaka</p>
+
+</div>
+
+<div>
+
+<h4>Available For</h4>
+
+<p>Freelance • Internship • Half-Time</p>
+
+</div>
+
+</div>
+
+<br><br>
+
+<a href="#" class="btn">Download CV</a>
+
+<a href="#" class="btn" style="margin-left:15px;background:#9333ea;">
+Hire Me
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer style="padding:50px 10%;text-align:center;color:var(--secondary);">
+
+<h2 style="margin-bottom:10px;">Taijul Islam Topu</h2>
+
+<p>
+Thank you for visiting my portfolio.
+</p>
+
+<br>
+
+<p>
+
+© 2026 TI. All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+<script>
+
+// =========================
+// Typing Animation
+// =========================
+
+const words=[
+"Full Stack Developer",
+"Competitive Programmer",
+"Web Designer",
+"Problem Solver",
+"Software Engineer"
+];
+
+let wordIndex=0;
+let charIndex=0;
+let deleting=false;
+
+const typing=document.getElementById("typing");
+
+function typeEffect(){
+
+const current=words[wordIndex];
+
+if(!deleting){
+
+typing.textContent=current.substring(0,charIndex++);
+
+if(charIndex>current.length){
+
+deleting=true;
+
+setTimeout(typeEffect,1200);
+
+return;
+
+}
+
+}else{
+
+typing.textContent=current.substring(0,charIndex--);
+
+if(charIndex===0){
+
+deleting=false;
+
+wordIndex=(wordIndex+1)%words.length;
+
+}
+
+}
+
+setTimeout(typeEffect,deleting?60:110);
+
+}
+
+typeEffect();
+
+
+// =========================
+// Dark Mode
+// =========================
+
+const toggle=document.querySelector(".toggle");
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark");
+
+toggle.innerHTML="☀️";
+
+}
+
+toggle.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+
+localStorage.setItem("theme","dark");
+
+toggle.innerHTML="☀️";
+
+}else{
+
+localStorage.setItem("theme","light");
+
+toggle.innerHTML="🌙";
+
+}
+
+};
+
+
+// =========================
+// Scroll Animation
+// =========================
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.2
+});
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+
+
+// =========================
+// Animated Skill Bars
+// =========================
+
+const skillObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+document.querySelectorAll(".fill").forEach(bar=>{
+
+bar.style.width=bar.dataset.width;
+
+});
+
+}
+
+});
+
+},{threshold:.4});
+
+skillObserver.observe(document.querySelector("#skills"));
+// =========================
+// Active Navigation Highlight
+// =========================
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sections.forEach(section => {
+
+const sectionTop = section.offsetTop - 120;
+const sectionHeight = section.offsetHeight;
+
+if(window.pageYOffset >= sectionTop){
+
+current = section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.style.color="";
+
+if(link.getAttribute("href")==="#"+current){
+
+link.style.color="var(--primary)";
+
+}
+
+});
+
+});
+
+
+// =========================
+// Scroll To Top Button
+// =========================
+
+const topBtn=document.createElement("button");
+
+topBtn.innerHTML="↑";
+
+topBtn.style.position="fixed";
+topBtn.style.right="25px";
+topBtn.style.bottom="25px";
+topBtn.style.width="50px";
+topBtn.style.height="50px";
+topBtn.style.border="none";
+topBtn.style.borderRadius="50%";
+topBtn.style.background="var(--primary)";
+topBtn.style.color="#fff";
+topBtn.style.fontSize="20px";
+topBtn.style.cursor="pointer";
+topBtn.style.display="none";
+topBtn.style.boxShadow="0 10px 20px rgba(0,0,0,.2)";
+topBtn.style.zIndex="999";
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+behavior:"smooth"
+
+});
+
+};
+
+
+// =========================
+// Loading Screen
+// =========================
+
+const loader=document.createElement("div");
+
+loader.style.position="fixed";
+loader.style.top="0";
+loader.style.left="0";
+loader.style.width="100%";
+loader.style.height="100%";
+loader.style.background="var(--bg)";
+loader.style.display="flex";
+loader.style.justifyContent="center";
+loader.style.alignItems="center";
+loader.style.fontSize="30px";
+loader.style.fontWeight="bold";
+loader.style.zIndex="99999";
+loader.innerHTML="Loading...";
+
+document.body.appendChild(loader);
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+loader.style.transition=".6s";
+
+setTimeout(()=>{
+
+loader.remove();
+
+},600);
+
+},500);
+
+});
+
+
+// =========================
+// Smooth Fade Cards
+// =========================
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px) scale(1.02)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0) scale(1)";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
